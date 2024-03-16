@@ -1,7 +1,5 @@
 import { BYPASS_TOKEN_FOR_INVALIDATION, getData, storeSurrogateKeys } from '$lib';
 
-export const prerender = true;
-
 export const config = {
 	isr: {
 		expiration: false,
