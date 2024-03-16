@@ -1,10 +1,10 @@
 import { BYPASS_TOKEN_FOR_INVALIDATION, getData, storeSurrogateKeys } from '$lib';
 
 export const config = {
-  isr: {
-    expiration: false,
-    bypassToken: BYPASS_TOKEN_FOR_INVALIDATION,
-  },
+	isr: {
+		expiration: false,
+		bypassToken: BYPASS_TOKEN_FOR_INVALIDATION
+	}
 };
 
 /** @type {import('./$types').PageLoad} */

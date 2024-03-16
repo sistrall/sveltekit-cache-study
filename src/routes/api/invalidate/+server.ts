@@ -3,7 +3,7 @@ import type { RequestHandler } from './$types';
 import { invalidateSurrogateKeys } from '$lib';
 
 export const POST: RequestHandler = async ({ request }) => {
-  const url = request.url;
+	const url = request.url;
 	const body = await request.text();
 	const surrogateKeys = body.split(/[\s,]+/);
 
