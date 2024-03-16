@@ -6,7 +6,7 @@ import {
 	REDIS_REST_API_TOKEN
 } from '$env/static/private';
 
-export const BYPASS_TOKEN_FOR_INVALIDATION = 'BYPASS_TOKEN_FOR_INVALIDATION';
+export const BYPASS_TOKEN_FOR_INVALIDATION = '0cf6uM5Ps5j64pJM3Xmdw7R52blwVNmY';
 
 export async function getData({
 	query,
@@ -71,7 +71,7 @@ export async function invalidateSurrogateKeys({
 	const kv = kvClient();
 
 	const pathsToBeRevalidated = (
-		await Promise.all(
+		await Promise.all( 
 			surrogateKeys.map(async (surrogateKey) => {
 				try {
 					const paths = await kv.smembers(surrogateKey);
