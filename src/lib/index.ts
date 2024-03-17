@@ -99,6 +99,7 @@ async function invalidatePath({ path, url }) {
 	const baseUrl = new URL(path, url).href;
 
 	fetch(baseUrl, {
+    method: "HEAD",
 		headers: {
 			'x-prerender-revalidate': BYPASS_TOKEN_FOR_INVALIDATION
 		}
